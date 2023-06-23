@@ -4,10 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
     <title>Encriptador</title>
+    <link rel="shortcut icon" href="imagenes/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-</body>
+    <header>
+        <div class="logo">
+            <h1><img src="imagenes/Vector.png" alt="logo de la compañia"></h1>
+        </div>
+    </header>
+    <main>
+        <div class="contenedorPrincipal">
+            <!--Área para el texto que va ser encriptado/desencriptado-->
+            <section class="escribir">
+                <form action="">
+                    <textarea name="areadetexto" id="mensaje" cols="60" rows="15" required placeholder="Ingrese el texto aquí"></textarea>
+                    <input type="button" value="Encriptar" id="encriptador" onclick="encriptar()">
+                    <input type="button" value="Desencriptar" id="desencriptador" onclick="desencriptar()">
+                </form>
+            <!--Área para mostrar el texto encriptado/desencriptado-->
+            </section>
+            <section class="mostrar">
+                <div id="caja-mostrar">
+                    <div id="cuadrodeTexto">
+                        <img src="imagenes/Muñeco.png" alt="imagen decorativa">
+                        <p id="primerTexto">Ningún mensaje fue encontrado</p>
+                        <p id="segundoTexto">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+                    <div style="display: none;" id="cuadroOculto"><p id="textoOculto"></p></div>
+                    <input type="button" value="Copiar" id="copiar" onclick="copiar()">
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="script/script.js"></script>
+</body>             
 </html>
