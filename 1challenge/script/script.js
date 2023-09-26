@@ -12,25 +12,25 @@ function encriptar() {
     let frase=document.getElementById("mensaje").value;
     console.log(frase);
 
-    if (frase) {
+    if (frase == null || frase.length == 0 || /^\s+$/.test(frase)) {
+        alert("Se necesita una frase para encriptar");
+    } else{
         frase = frase.replaceAll("e", "enter");
         frase = frase.replaceAll("i", "imes");
         frase = frase.replaceAll("a", "ai");
         frase = frase.replaceAll("o", "ober");
         frase = frase.replaceAll("u", "ufat");
-    } else {
 
+        document.getElementById("cuadrodeTexto").style.display = "none";
+
+        document.getElementById("cuadroOculto").style.display = "inline-flex";
+
+        document.getElementById("copiar").style.display = "block"; 
     }
-
-    document.getElementById("cuadrodeTexto").style.display = "none";
-
-    document.getElementById("cuadroOculto").style.display = "block";
-    
+        
     let textoOculto = document.getElementById("textoOculto");
 
     textoOculto.textContent = frase;
-
-    document.getElementById("copiar").style.display = "block";       
         
 }
 
@@ -41,24 +41,26 @@ function desencriptar() {
     let frase=document.getElementById("mensaje").value;
     console.log(frase);
 
-    if (frase) {
+    if (frase == null || frase.length == 0 || /^\s+$/.test(frase)) {
+        alert("Se necesita una frase para desencriptar");
+    }else{
         frase = frase.replaceAll("enter", "e");
         frase = frase.replaceAll("imes", "i");
         frase = frase.replaceAll("ai", "a");
         frase = frase.replaceAll("ober", "o");
         frase = frase.replaceAll("ufat", "u");
+
+        document.getElementById("cuadrodeTexto").style.display = "none";
+
+        document.getElementById("cuadroOculto").style.display = "block";
+
+        document.getElementById("copiar").style.display = "block"; 
     }
     
-    document.getElementById("cuadrodeTexto").style.display = "none";
-
-    document.getElementById("cuadroOculto").style.display = "block";
-        
     let textoOculto = document.getElementById("textoOculto");
     
     textoOculto.textContent = frase;
-    
-    document.getElementById("copiar").style.display = "block";      
-        
+
 }
 
 // Parte de copiar

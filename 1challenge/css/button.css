@@ -1,0 +1,53 @@
+input {
+    width: 22rem;
+    height: 4.5rem;
+    padding: 24px;
+    margin-top: 24px;
+    margin-right: 24px;
+    gap: 8px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#encriptador{
+    background-color: #0A3871;
+    color: #F3F5FC;
+}
+
+#encriptador:hover{
+    background:none;
+    color: #0A3871;
+}
+
+#desencriptador {
+    background: none;
+    color: #0A3871;
+}
+
+#desencriptador:hover{
+    background: #0A3871;
+    color: #F3F5FC;
+}
+
+#copiar {
+    background: none;
+    color: #0A3871;
+    margin: 5%;
+}
+
+#copiar:hover{
+    background: #0A3871;
+    color: #F3F5FC;
+}
+
+@media (max-width: 1530px){
+
+    input{
+        width: 18rem;
+        margin-right: 0%;
+        margin: 3%;
+    }
+}
